@@ -1,0 +1,24 @@
+package test01;
+import java.util.Calendar;
+import java.util.Date;
+public class Test {
+
+	public static void main(String[] args) {
+		Date date = new Date();
+		
+		Calendar c = Calendar.getInstance();
+		
+		long time = date.getTime();
+		long timeInMillis = c.getTimeInMillis();
+		
+		System.out.println(time);
+		System.out.println(timeInMillis);
+		
+		
+		long currentTimeMillis = System.currentTimeMillis();
+		for (int i = 0; i < 10000; i++) {
+			System.out.println(i);
+		}
+		System.out.println(System.currentTimeMillis()-currentTimeMillis);
+	}
+}
